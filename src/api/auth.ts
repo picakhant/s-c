@@ -14,3 +14,12 @@ export const login = async ({
     throw error;
   }
 };
+
+export const me = async () => {
+  try {
+    const res = await instance.get("/auth/me");
+    return res;
+  } catch (error) {
+    throw error;
+  }
+};
